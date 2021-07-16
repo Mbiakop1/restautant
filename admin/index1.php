@@ -1,10 +1,7 @@
 <?php
-
-
 try{
     $bdd= new pdo('mysql:host=localhost;dbname=cart;charset=utf8', 'root',  '',
     [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
-   
 }
 catch(exception $e){
     die('Error: ' .$e->getMessage());
@@ -17,15 +14,10 @@ if(isset($_SESSION['username'])){
 }
 else{
     header('location: index.php');
-    var_dump($_SESSION['username']);
 }
-
 ?>
-
-
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Recapitulatif</h1>

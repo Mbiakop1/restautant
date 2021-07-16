@@ -29,3 +29,7 @@ if (
 function toggl() {
     document.getElementById("recipt").classList.toggle("show");
 }
+
+// display plate info in another page
+
+plateId = document.getElementById("foodInfo");
