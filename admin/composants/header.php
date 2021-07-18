@@ -4,6 +4,10 @@
 <head>
     <?php 
          session_start();
+         if(isset($_POST['logout'])){
+             session_destroy();
+             header("Location: index.php");
+         }
     ?>
 
     <meta charset="utf-8">
@@ -130,6 +134,12 @@
                 <a class="nav-link" href="voirplat.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>voir plats</span></a>
+            </li>
+
+            <li>
+                <form action="index.php" method="POST">
+                    <input class="btn btn-danger" type="submit" name="logout" value="Deconnexion">
+                </form>
             </li>
 
 

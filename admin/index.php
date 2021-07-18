@@ -1,9 +1,10 @@
 <?php   
 
 session_start();
-
-
-
+if(isset($_POST['logout'])){
+             session_destroy();
+             header("Location: index.php");
+}
 try{
     $bdd= new pdo('mysql:host=localhost;dbname=cart;charset=utf8', 'root',  '',
     [PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION]);
